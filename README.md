@@ -15,6 +15,13 @@ Chicago dataset
 New York City dataset
 Washington dataset
 
+### Program features
+The data can be explored based on the user's choice.
+
+End user can choose which city/month year/day of week they wish to explore.
+
+They can also choose how many lines of data they want displayed
+
 ### Credits
 Udacity github
 Udacity course material
