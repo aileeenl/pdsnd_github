@@ -5,6 +5,9 @@
 ### Project Title
 US Bikeshare Data
 
+### Sub-title
+Chicago, New York City and Washington Bikeshare Data
+
 ### Description
 Explore Bikeshare data in 3 cities - Chicago, New York City and Washington.
 
