@@ -56,6 +56,25 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
+def display_raw_data(df):
+    """
+    Display lines of raw data upon request
+
+    """
+    i = 0
+    raw = input("\nWould you like to view 5 rows of individual trip data? Enter yes or no\n").lower()
+    pd.set_option('display.max_columns',200)
+
+    while True:
+        if raw == 'no':
+            break
+        elif raw == 'yes':
+            print(df[0:5])
+            raw = input("\nWould you like to view another 5 rows of individual trip data? Enter yes or no\n").lower()
+            i += 5
+        else:
+            raw = input("\nYour input is invalid. Please enter only 'yes' or 'no'\n").lower()
+            
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -179,7 +198,7 @@ def gender_stats(gender):
     # TO DO: Display counts of gender
         print('Gender Stats:')
         print(df['Gender'].value_counts())
-        print('-'*40)        
+        print('-'*40)
 
     # Skip gender/birth year stats for Washington due to no stats available
     except KeyError:
@@ -200,19 +219,7 @@ def birth_year_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def display_data(df, data):
-    """
-    shows lines of raw data upon request
 
-    """
-    city_data = pd.read_csv[("chicago.csv"), ("new york city. csv"), ("washington.csv")]
-
-    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n')
-    start_loc = 0
-    while True:
-        print(data.iloc[0:5])
-        start_loc += 5
-        view_data = input("Do you wish to continue?: ").lower()
 
 def main():
     while True:
