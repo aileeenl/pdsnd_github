@@ -179,12 +179,13 @@ def gender_stats(gender):
     # TO DO: Display counts of gender
         print('Gender Stats:')
         print(df['Gender'].value_counts())
+        print('-'*40)        
 
     # Skip gender/birth year stats for Washington due to no stats available
     except KeyError:
         print('\nThere are no stats available for this city\n')
 
-    
+
 
 def birth_year_stats(df):
     # TO DO: Display earliest, most recent, and most common year of birth
